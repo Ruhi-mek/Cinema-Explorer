@@ -6,5 +6,6 @@ export default defineConfig({
     outDir: '../dist',
     emptyOutDir: true
   },
-  publicDir: '../public'
+  publicDir: '../public',
+  envDir: '..' // Look for .env in parent directory (project root)
 });

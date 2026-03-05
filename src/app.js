@@ -23,8 +23,8 @@ class Router {
     const content = document.getElementById('content');
     content.innerHTML = '<div class="loader">Loading...</div>';
     
-    const html = await this.currentPage.render();
-    content.innerHTML = html;
+    // Pages now render directly to the DOM, no return value
+    await this.currentPage.render();
     
     if (this.currentPage.attachEvents) {
       this.currentPage.attachEvents();

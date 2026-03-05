@@ -3,7 +3,7 @@ export class Footer {
   render() {
     return `
       <footer class="footer">
-        <p>&copy; ${new Date().getFullYear()} Cinema Explorer. Powered by TMDB.</p>
+        <p>&copy; ${new Date().getFullYear()} Cinema Explorer.</p>
       </footer>
     `;
   }
