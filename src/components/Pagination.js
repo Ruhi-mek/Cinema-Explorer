@@ -1,4 +1,4 @@
-// Pagination Component - Single Responsibility: Pagination UI and logic
+// Pagination Component
 export class Pagination {
   constructor(containerId) {
     this.container = document.getElementById(containerId);

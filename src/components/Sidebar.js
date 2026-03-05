@@ -1,4 +1,4 @@
-// Sidebar Component - Single Responsibility: Genre sidebar UI
+// Sidebar Component
 export class Sidebar {
   constructor(containerId) {
     this.container = document.getElementById(containerId);

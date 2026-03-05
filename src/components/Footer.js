@@ -1,4 +1,4 @@
-// Footer Component - Single Responsibility: Footer UI
+// Footer Component
 export class Footer {
   render() {
     return `

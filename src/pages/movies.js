@@ -1,4 +1,4 @@
-// Movies Page - Single Responsibility: Movies page logic and rendering
+// Movies Page 
 import movieService from '../api/movieService.js';
 import genreService from '../api/genreService.js';
 import { Hero } from '../components/Hero.js';
@@ -100,6 +100,5 @@ export class MoviesPage {
   }
 
   attachEvents() {
-    // Events are attached in components
   }
 }

@@ -1,4 +1,4 @@
-// Hero Component - Single Responsibility: Hero carousel UI
+// Hero Component
 const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/original';
 
 export class Hero {

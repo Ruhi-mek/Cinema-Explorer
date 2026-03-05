@@ -1,4 +1,4 @@
-// People Service - Single Responsibility: Handle all celebrity-related API calls
+// People Service
 import apiClient from './apiClient.js';
 
 class PeopleService {

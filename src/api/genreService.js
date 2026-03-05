@@ -1,4 +1,4 @@
-// Genre Service - Single Responsibility: Handle all genre-related API calls
+// Genre Service
 import apiClient from './apiClient.js';
 
 class GenreService {

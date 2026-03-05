@@ -1,4 +1,4 @@
-// Series Page - Single Responsibility: Series page logic and rendering
+// Series Page
 import seriesService from '../api/seriesService.js';
 import genreService from '../api/genreService.js';
 import { Hero } from '../components/Hero.js';

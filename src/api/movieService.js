@@ -1,4 +1,4 @@
-// Movie Service - Single Responsibility: Handle all movie-related API calls
+// Movie Service
 import apiClient from './apiClient.js';
 
 class MovieService {

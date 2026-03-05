@@ -1,4 +1,4 @@
-// Series Service - Single Responsibility: Handle all TV series-related API calls
+// Series Service
 import apiClient from './apiClient.js';
 
 class SeriesService {

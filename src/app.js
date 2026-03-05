@@ -29,6 +29,19 @@ class Router {
     if (this.currentPage.attachEvents) {
       this.currentPage.attachEvents();
     }
+
+    // Update active nav link
+    this.updateActiveNavLink(path);
+  }
+
+  updateActiveNavLink(path) {
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === path) {
+        link.classList.add('active');
+      }
+    });
   }
 
   init() {

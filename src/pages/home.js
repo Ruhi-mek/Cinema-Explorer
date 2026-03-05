@@ -1,4 +1,4 @@
-// Home Page - Single Responsibility: Homepage logic and rendering
+// Home Page
 import movieService from '../api/movieService.js';
 import seriesService from '../api/seriesService.js';
 import peopleService from '../api/peopleService.js';
@@ -55,6 +55,5 @@ export class HomePage {
   }
 
   attachEvents() {
-    // Events are attached in components
   }
 }

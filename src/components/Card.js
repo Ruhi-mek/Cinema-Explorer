@@ -1,4 +1,4 @@
-// Card Component - Single Responsibility: Display content cards
+// Card Component
 const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/w500';
 const PROFILE_BASE_URL = 'https://image.tmdb.org/t/p/w300';
 const PLACEHOLDER_IMAGE = 'https://via.placeholder.com/300x450/1a1a1a/ffffff?text=No+Image';

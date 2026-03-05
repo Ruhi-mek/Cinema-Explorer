@@ -1,14 +1,14 @@
-// Base API client - handles all HTTP requests with authentication
+// Base API client
 const BASE_URL = 'https://api.themoviedb.org/3';
 const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
 
-// Debug: Log API key status on load
+// Log API key status on load
 console.log('API Key loaded:', API_KEY ? 'YES (length: ' + API_KEY.length + ')' : 'NO - CHECK .env FILE');
 console.log('Environment:', import.meta.env);
 
 class ApiClient {
   async fetch(endpoint, params = {}) {
-    // Debug: Check if API key is loaded
+    // Check if API key is loaded
     if (!API_KEY) {
       console.error('❌ API Key is missing! Make sure VITE_TMDB_API_KEY is set in .env file');
       console.error('Did you restart the dev server after creating .env?');

@@ -1,4 +1,4 @@
-// Celebrities Page - Single Responsibility: Celebrities page logic and rendering
+// Celebrities Page
 import peopleService from '../api/peopleService.js';
 import { Card } from '../components/Card.js';
 import { Pagination } from '../components/Pagination.js';
@@ -67,6 +67,5 @@ export class CelebritiesPage {
   }
 
   attachEvents() {
-    // Events are attached in components
   }
 }
