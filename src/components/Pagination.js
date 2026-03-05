@@ -1,5 +1,9 @@
 // Pagination Component - Single Responsibility: Pagination UI and logic
 export class Pagination {
+  constructor(containerId) {
+    this.container = document.getElementById(containerId);
+  }
+
   render(currentPage, totalPages, onPageChange) {
     const maxVisible = 5;
     let startPage = Math.max(1, currentPage - Math.floor(maxVisible / 2));
@@ -14,42 +18,42 @@ export class Pagination {
       pages.push(i);
     }
 
-    return `
-      <div class="pagination">
-        <button class="pagination-btn" 
-                data-page="${currentPage - 1}" 
-                ${currentPage === 1 ? 'disabled' : ''}>
-          Previous
+    this.container.innerHTML = `
+      <button class="pagination-btn" 
+              data-page="${currentPage - 1}" 
+              ${currentPage === 1 ? 'disabled' : ''}>
+        Previous
+      </button>
+      
+      ${startPage > 1 ? `
+        <button class="pagination-btn" data-page="1">1</button>
+        ${startPage > 2 ? '<span class="pagination-ellipsis">...</span>' : ''}
+      ` : ''}
+      
+      ${pages.map(page => `
+        <button class="pagination-btn ${page === currentPage ? 'active' : ''}" 
+                data-page="${page}">
+          ${page}
         </button>
-        
-        ${startPage > 1 ? `
-          <button class="pagination-btn" data-page="1">1</button>
-          ${startPage > 2 ? '<span class="pagination-ellipsis">...</span>' : ''}
-        ` : ''}
-        
-        ${pages.map(page => `
-          <button class="pagination-btn ${page === currentPage ? 'active' : ''}" 
-                  data-page="${page}">
-            ${page}
-          </button>
-        `).join('')}
-        
-        ${endPage < totalPages ? `
-          ${endPage < totalPages - 1 ? '<span class="pagination-ellipsis">...</span>' : ''}
-          <button class="pagination-btn" data-page="${totalPages}">${totalPages}</button>
-        ` : ''}
-        
-        <button class="pagination-btn" 
-                data-page="${currentPage + 1}" 
-                ${currentPage === totalPages ? 'disabled' : ''}>
-          Next
-        </button>
-      </div>
+      `).join('')}
+      
+      ${endPage < totalPages ? `
+        ${endPage < totalPages - 1 ? '<span class="pagination-ellipsis">...</span>' : ''}
+        <button class="pagination-btn" data-page="${totalPages}">${totalPages}</button>
+      ` : ''}
+      
+      <button class="pagination-btn" 
+              data-page="${currentPage + 1}" 
+              ${currentPage === totalPages ? 'disabled' : ''}>
+        Next
+      </button>
     `;
+    
+    this.attachEvents(onPageChange);
   }
 
   attachEvents(onPageChange) {
-    const buttons = document.querySelectorAll('.pagination-btn');
+    const buttons = this.container.querySelectorAll('.pagination-btn');
     buttons.forEach(btn => {
       btn.addEventListener('click', () => {
         const page = parseInt(btn.dataset.page);

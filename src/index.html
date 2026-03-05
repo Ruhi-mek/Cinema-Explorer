@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/cinema.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cinema Explorer</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- Navbar -->
+      <nav class="navbar">
+        <div class="navbar-left">
+          <img src="/brand name.svg" alt="Cinema Explorer" class="brand-logo" />
+        </div>
+        <div class="navbar-right">
+          <a href="/" class="nav-link" data-page="home">Home</a>
+          <a href="/movies" class="nav-link" data-page="movies">Movies</a>
+          <a href="/series" class="nav-link" data-page="series">Series</a>
+          <a href="/celebrities" class="nav-link" data-page="celebrities">Celebrities</a>
+        </div>
+      </nav>
+
+      <!-- Main Content -->
+      <main id="content">
+        <div class="loader">Loading...</div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <p>&copy; 2024 Cinema Explorer. Powered by TMDB.</p>
+      </footer>
+    </div>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

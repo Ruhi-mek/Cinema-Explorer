@@ -1,10 +1,11 @@
-// Router - Single Responsibility: Handle navigation and routing
+import './styles/main.css';
 import { HomePage } from './pages/home.js';
 import { MoviesPage } from './pages/movies.js';
 import { SeriesPage } from './pages/series.js';
 import { CelebritiesPage } from './pages/celebrities.js';
 
-export class Router {
+// Router - Handle navigation and routing
+class Router {
   constructor() {
     this.routes = {
       '/': HomePage,
@@ -50,3 +51,9 @@ export class Router {
     this.navigate(window.location.pathname);
   }
 }
+
+// Initialize app
+document.addEventListener('DOMContentLoaded', () => {
+  const router = new Router();
+  router.init();
+});
